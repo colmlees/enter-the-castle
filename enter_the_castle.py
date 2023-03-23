@@ -14,18 +14,20 @@ player_choice = int(input("Choose 1, 2, 3, or 4..."))
 
 #add 3 player choices to navigate the castle using conditions
 
-player_choice = random.randint(1,4)
+player_choice = random.randint(1,10)
 
-
-if player_choice == 1:
+#20% chance of getting number 1
+if player_choice >= 1 and player_choice <= 2:
     print("You find a room full of treasure. You're rich!")
     print("GAME OVER, YOU WIN!")
 
-elif player_choice == 2:
+#20% chance of getting number 2
+elif player_choice >= 3 and player_choice <= 4:
     print("The door opens and an angry ogre hits you with his club.")
     print("GAME OVER, YOU LOSE..")
 
-elif player_choice == 3:
+#40% chance of getting number 3
+elif player_choice >= 5 and player_choice <= 8:
     print("You go into the room and find a sleeping dragon.")
     print("You can either:")
     print("1) Try to steal some of the dragons gold.")
@@ -40,7 +42,9 @@ elif player_choice == 3:
     else:
         print("Sorry, you didn't enter 1 or 2.")
 
-elif player_choice == 4:
+        
+#20% chance of getting number 4
+elif player_choice >= 9 and player_choice <= 10:
     print("You enter a room with a sphinx")
     print("It asks you to guess what number it is thinking of, between 1 and 10.")
     number = int(input("What number do you choose?"))
