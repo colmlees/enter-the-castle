@@ -9,9 +9,19 @@ import random
 print("You are in a dark room in a mysterious castle.")
 print("In front of you are four doors. You must choose one.")
 
-#get the player to choose option 1, 2, 3 or 4
-player_choice = int(input("Choose 1, 2, 3, or 4..."))
+#Adding a loop to our code 
+repeat = True
+while repeat is True:
+    #get the player to choose option 1, 2, 3 or 4
+    player_choice = int(input("Choose 1, 2, 3, or 4..."))
 
+    if player_choice <= 0 or player_choice >= 5:
+        print("Sorry you didn't enter 1, 2, 3 or 4.")
+        print("Run the game again to have another go.")
+#breaks the loop
+    else:
+        repeat = False 
+    
 #add 3 player choices to navigate the castle using conditions
 
 player_choice = random.randint(1,10)
@@ -59,6 +69,4 @@ elif player_choice >= 9 and player_choice <= 10:
         print("The sphinx tells you that your guess is incorrect.")
         print("You are now her prisoner forever.")
         print("GAME OVER. YOU LOSE!")
-else:
-    print("Sorry you didn't enter 1, 2, 3 or 4.")
-print("Run the game again to have another go.")
+
